@@ -5,6 +5,11 @@
   "num_mip_levels": 4,
   "texture_data": {
     "lpsm_vm:vending_machine_top": { "textures": "textures/lpsm/vm/blocks/vending_machine_top.png" },
-    "lpsm_vm:vending_machine_bottom": { "textures": "textures/lpsm/vm/blocks/vending_machine_bottom.png" }
+    "lpsm_vm:vending_machine_top_side": { "textures": "textures/lpsm/vm/blocks/vending_machine_top_side.png" },
+    "lpsm_vm:vending_machine_top_front": { "textures": "textures/lpsm/vm/blocks/vending_machine_top_front.png" },
+    "lpsm_vm:vending_machine_top_back": { "textures": "textures/lpsm/vm/blocks/vending_machine_top_back.png" },
+    "lpsm_vm:vending_machine_bottom_side": { "textures": "textures/lpsm/vm/blocks/vending_machine_bottom_side.png" },
+    "lpsm_vm:vending_machine_bottom_front": { "textures": "textures/lpsm/vm/blocks/vending_machine_bottom_front.png" },
+    "lpsm_vm:vending_machine_bottom_back": { "textures": "textures/lpsm/vm/blocks/vending_machine_bottom_back.png" }
   }
 }

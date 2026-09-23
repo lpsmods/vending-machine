@@ -23,7 +23,19 @@
       "minecraft:geometry": "minecraft:geometry.full_block",
       "minecraft:material_instances": {
         "*": {
-          "texture": "minecraft:stone"
+          "texture": "lpsm_vm:vending_machine_bottom_side"
+        },
+        "north": {
+          "texture": "lpsm_vm:vending_machine_bottom_front"
+        },
+        "south": {
+          "texture": "lpsm_vm:vending_machine_bottom_back"
+        },
+        "up": {
+          "texture": "lpsm_vm:vending_machine_top"
+        },
+        "down": {
+          "texture": "lpsm_vm:vending_machine_top"
         }
       },
       "minecraft:destructible_by_explosion": {
@@ -35,7 +47,60 @@
       "minecraft:movable": {
         "movement_type": "immovable"
       },
-      "lpsm_vm:vending_machine": {}
-    }
+      "lpsm_vm:vending_machine": {},
+      "minecraft:item_visual": {
+        "geometry": "geometry.lpsm_vm.vending_machine_carried",
+        "material_instances": {
+          "top_side": {
+            "texture": "lpsm_vm:vending_machine_top_side"
+          },
+          "bottom_side": {
+            "texture": "lpsm_vm:vending_machine_bottom_side"
+          },
+          "top_front": {
+            "texture": "lpsm_vm:vending_machine_top_front"
+          },
+          "bottom_front": {
+            "texture": "lpsm_vm:vending_machine_bottom_front"
+          },
+          "top_back": {
+            "texture": "lpsm_vm:vending_machine_top_back"
+          },
+          "bottom_back": {
+            "texture": "lpsm_vm:vending_machine_bottom_back"
+          },
+          "up": {
+            "texture": "lpsm_vm:vending_machine_top"
+          },
+          "down": {
+            "texture": "lpsm_vm:vending_machine_top"
+          }
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:multi_block_part')==1",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "lpsm_vm:vending_machine_top_side"
+            },
+            "north": {
+              "texture": "lpsm_vm:vending_machine_top_front"
+            },
+            "south": {
+              "texture": "lpsm_vm:vending_machine_top_back"
+            },
+            "up": {
+              "texture": "lpsm_vm:vending_machine_top"
+            },
+            "down": {
+              "texture": "lpsm_vm:vending_machine_top"
+            }
+          }
+        }
+      }
+    ]
   }
 }
