@@ -1,39 +1,38 @@
-import { ActionForm, ActionFormHandler, Identifier, ModalFormHandler } from "@lpsmods/mc-common";
+import { ActionForm, ActionFormHandler, Identifier } from "@lpsmods/mc-common";
 import {
   Block,
   BlockComponentPlayerInteractEvent,
   BlockCustomComponent,
   Container,
   CustomComponentParameters,
-  ItemStack,
   Player,
   RawMessage,
 } from "@minecraft/server";
-import { PROJECT_ID } from "scripts/constants";
-import { makeId } from "scripts/utils";
+
+import { PROJECT_ID } from "../constants";
+import { TradeInstance } from "../trade";
+import { makeId } from "../utils";
+import { array, object, string, Struct } from "superstruct";
 
 export interface BlockVendingMachineOptions {
-  tags: string[]; // Like crafting tags but for vending machines.
-}
-
-interface Trade {
-  wants: ItemStack;
-  wantsSlot: number;
-  additionalWants?: ItemStack;
-  additionalWantsSlot?: number;
-  gives: ItemStack;
-  givesSlot: number;
+  crafting_tags: string[];
+  table_name: string;
 }
 
 export class BlockVendingMachineComponent implements BlockCustomComponent {
   static readonly componentId: string = makeId("vending_machine");
 
+  struct: Struct<any, any> = object({
+    crafting_tags: array(string()),
+    table_name: string(),
+  });
+
   constructor() {
     this.onPlayerInteract = this.onPlayerInteract.bind(this);
   }
 
-  getTrades(container: Container): Trade[] {
-    const trades: Trade[] = [];
+  getTrades(container: Container): TradeInstance[] {
+    const trades: TradeInstance[] = [];
     for (let wantsSlot = 0; wantsSlot < 8; wantsSlot++) {
       const wants = container.getItem(wantsSlot);
       if (!wants) continue;
@@ -54,11 +53,11 @@ export class BlockVendingMachineComponent implements BlockCustomComponent {
     return trades;
   }
 
-  openScreen(player: Player, barrel: Block): void {
+  openScreen(player: Player, barrel: Block, options: BlockVendingMachineOptions): void {
     const container = barrel.getComponent("inventory")?.container;
     if (!container) return;
     const form: ActionForm = {
-      title: `menu.${PROJECT_ID}:vending_machine`,
+      title: options.table_name,
       buttons: [],
     };
     if (container.emptySlotsCount === container.size) form.body = `menu.${PROJECT_ID}:vending_machine.empty`;
@@ -87,12 +86,17 @@ export class BlockVendingMachineComponent implements BlockCustomComponent {
     return block.below();
   }
 
+  // EVENTS
+
   onPlayerInteract(event: BlockComponentPlayerInteractEvent, args: CustomComponentParameters) {
-    const options = args.params as BlockVendingMachineOptions; // TODO: readonly trades
+    const options = this.struct.create(args.params) as BlockVendingMachineOptions; // TODO: readonly trades
     if (!event.player) return;
     const barrel = this.getBarrel(event.block);
-    if (!barrel || !barrel.matches("barrel"))
+
+    // Use built-in trades instead.
+    if (!barrel || !barrel.matches("barrel")) {
       return event.player.onScreenDisplay.setActionBar({ translate: `action.interact.${PROJECT_ID}:no_barrel` });
-    this.openScreen(event.player, barrel);
+    }
+    this.openScreen(event.player, barrel, options);
   }
 }

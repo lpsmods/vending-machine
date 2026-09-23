@@ -47,7 +47,10 @@
       "minecraft:movable": {
         "movement_type": "immovable"
       },
-      "lpsm_vm:vending_machine": {},
+      "lpsm_vm:vending_machine": {
+        "crafting_tags": ["vending_machine"],
+        "table_name": "menu.lpsm_vm:vending_machine"
+      },
       "minecraft:item_visual": {
         "geometry": "geometry.lpsm_vm.vending_machine_carried",
         "material_instances": {
