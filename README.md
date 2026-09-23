@@ -4,4 +4,4 @@
 ![Version](https://img.shields.io/curseforge/v/931802?style=for-the-badge)
 ![Game Versions](https://img.shields.io/curseforge/game-versions/931802?style=for-the-badge)
 
-Adds new variants of blocks like stairs, slabs, vertical slabs, and layers.
+Adds a vending machine to Minecraft!

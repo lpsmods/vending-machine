@@ -3,8 +3,8 @@
   "minecraft:recipe_shapeless": {
     "description": { "identifier": "lpsm_vm:guide_book" },
     "tags": ["crafting_table"],
-    "ingredients": [{ "item": "minecraft:book" }, { "item": "lpsm_vm:oak_vertical_slab" }],
-    "unlock": [{ "item": "minecraft:book" }, { "item": "lpsm_vm:oak_vertical_slab" }],
+    "ingredients": [{ "item": "minecraft:book" }, { "item": "lpsm_vm:vending_machine" }],
+    "unlock": [{ "item": "minecraft:book" }, { "item": "lpsm_vm:vending_machine" }],
     "result": { "item": "lpsm_vm:guide_book" }
   }
 }

@@ -1,4 +1,13 @@
 ﻿pack.name=Vending Machine Add-On
-pack.description=desc! §8Developer: §6Legopitstop
+pack.description=Adds a vending machine to Minecraft! §8Developer: §6Legopitstop
 
+item.lpsm_vm:guide_book=Guide Book\n§aVending Machine Add-On§r
 item.lpsm_vm:vending_machine=Vending Machine\n§aVending Machine Add-On§r
+
+## Guide
+guide.lpsm_vm:desc=Welcome to §aVending Machine§r! This Add-On adds vending machines to your world!\n\n
+guide.lpsm_vm:creator=Creator
+guide.lpsm_vm:creator.desc=§lDiscord Server:§r\nJoin the community at §vdiscord.lpsmods.dev§r for Add-On help, updates, and creator discussion.
+guide.lpsm_vm:items.guide_book.desc=A reference that explains new blocks, items, and mechanics added by this Add-On.\n\n§lStackable:§r No\n\n§lUsage:§r An interface to help you understand everything added by the Add-On.\n\n§lObtain:§r Crafted with a Book and a Vending Machine.
+guide.lpsm_vm:blocks.vending_machine=Vending Machine
+guide.lpsm_vm:blocks.vending_machine.desc=desc

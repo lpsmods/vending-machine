@@ -1,6 +1,6 @@
 import { StartupEvent, system } from "@minecraft/server";
 import { registerItemComponents } from "./item";
-import { registerBlockComponents } from "./block";
+import { registerBlockComponents } from "./blocks";
 
 import { initializeDev } from "@lpsmods/mc-dev";
 import { ENVIRONMENT } from "./constants";

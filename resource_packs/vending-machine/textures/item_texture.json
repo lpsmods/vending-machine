@@ -1,5 +1,8 @@
 {
   "resource_pack_name": "vanilla",
   "texture_name": "atlas.items",
-  "texture_data": { "lpsm_vm:guide_book": { "textures": "textures/lpsm/vm/items/guide_book.png" } }
+  "texture_data": {
+    "lpsm_vm:guide_book": { "textures": "textures/lpsm/vm/items/guide_book.png" },
+    "lpsm_vm:vending_machine": { "textures": "textures/lpsm/vm/items/guide_book.png" }
+  }
 }
