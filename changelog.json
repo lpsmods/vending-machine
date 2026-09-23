@@ -1,0 +1,13 @@
+{
+  "1.1.0": {
+    "title": "1.1.0",
+    "date": "2022-14-06",
+    "author": "legopitstop",
+    "categories": [
+      {
+        "title": "General",
+        "list": ["Initial release"]
+      }
+    ]
+  }
+}

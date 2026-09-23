@@ -1,0 +1,4 @@
+﻿pack.name=Vending Machine Add-On
+pack.description=desc! §8Developer: §6Legopitstop
+
+item.lpsm_vm:vending_machine=Vending Machine\n§aVending Machine Add-On§r

@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "target": "es2022",
+    "moduleResolution": "bundler",
+    "module": "ES2022",
+    "baseUrl": ".",
+    "paths": {
+      "#changelog": ["build/generated/changelog.ts"]
+    },
+    "declaration": false,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "pretty": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": false,
+    "noImplicitUseStrict": false,
+    "outDir": "lib",
+    "rootDir": ".",
+    "listFiles": false,
+    "noEmitHelpers": true,
+    "skipLibCheck": true,
+    "lib": ["es2022"]
+  },
+  "include": ["scripts/**/*"],
+  "exclude": ["lib", "dist", "node_modules"],
+  "compileOnSave": false
+}

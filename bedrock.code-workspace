@@ -1,0 +1,43 @@
+{
+  "folders": [
+    {
+      "name": "Vending Machine Add-On",
+      "path": ".",
+    },
+  ],
+  "settings": {
+    "files.associations": {
+      "*.json": "jsonc",
+    },
+    "cSpell.words": ["cornerable"],
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#6796a4",
+      "activityBar.background": "#6796a4",
+      "activityBar.foreground": "#15202b",
+      "activityBar.inactiveForeground": "#15202b99",
+      "activityBarBadge.background": "#78486d",
+      "activityBarBadge.foreground": "#e7e7e7",
+      "commandCenter.border": "#e7e7e799",
+      "sash.hoverBorder": "#6796a4",
+      "statusBar.background": "#517b87",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#6796a4",
+      "statusBarItem.remoteBackground": "#cfafc8",
+      "statusBarItem.remoteForeground": "#e7e7e7",
+      "titleBar.activeBackground": "#517b87",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#517b8799",
+      "titleBar.inactiveForeground": "#e7e7e799",
+      "activityBarTop.activeBackground": "#6796a4",
+      "activityBarTop.background": "#6796a4",
+      "activityBarTop.foreground": "#15202b",
+      "activityBarTop.inactiveForeground": "#15202b99",
+      "commandCenter.foreground": "#e7e7e7",
+      "statusBar.debuggingBackground": "#517b87",
+      "statusBar.debuggingForeground": "#e7e7e7",
+      "activityBar.activeBorder": "#15202b",
+      "activityBarTop.activeBorder": "#15202b"
+    },
+    "peacock.color": "#517b87",
+  },
+}

@@ -1,0 +1,40 @@
+{
+  "name": "vending-machine",
+  "private": true,
+  "devDependencies": {
+    "@lpsmods/mc-build": "^0.0.1",
+    "@minecraft/core-build-tasks": "^5.7.0",
+    "@types/node": "^26.6.2",
+    "@types/pako": "^2.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.70.1",
+    "eslint-plugin-minecraft-linting": "^2.0.12",
+    "prettier": "^3.9.8",
+    "source-map": "^0.7.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.2"
+  },
+  "scripts": {
+    "lint": "just-scripts lint",
+    "build": "just-scripts build",
+    "clean": "just-scripts clean",
+    "local-deploy": "just-scripts local-deploy",
+    "mcaddon": "just-scripts mcaddon",
+    "enablemcloopback": "CheckNetIsolation.exe LoopbackExempt -a -p=S-1-15-2-1958404141-86561845-1752920682-3514627264-368642714-62675701-733520436",
+    "enablemcpreviewloopback": "CheckNetIsolation.exe LoopbackExempt -a -p=S-1-15-2-424268864-5579737-879501358-346833251-474568803-887069379-4040235476"
+  },
+  "dependencies": {
+    "@lpsmods/mc-common": "0.0.4",
+    "@lpsmods/mc-dev": "0.0.4",
+    "@lpsmods/mc-utils": "1.0.1",
+    "@minecraft/math": "^2.4.0",
+    "@minecraft/server": "^2.10.0",
+    "@minecraft/server-ui": "^2.2.0",
+    "@minecraft/vanilla-data": "^1.26.51",
+    "json5": "^2.2.3",
+    "pako": "^2.2.0"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true,
+    "esbuild@0.28.2": true
+  }
+}
